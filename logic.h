@@ -9,7 +9,7 @@ typedef struct{
 
 } grid;
 
-grid create_grid(int width, int hight);
+grid *create_grid(int width, int hight);
 
 #endif // !LOGIC_H
 
