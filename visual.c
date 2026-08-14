@@ -17,12 +17,13 @@ game_t *create_game(void)
 
 void step_game(game_t *game, int input)
 {
+  (void)input;
   print_game(game);
 }
 
 void destroy_game(game_t *game)
 {
-  
+  (void)game;
 }
 
 
@@ -38,9 +39,9 @@ void print_game(game_t *game)
     x = 0;
     while (x < game->grid->width) {
       cell = game->grid->array[y * game->grid->width + x];
-      addstr(cell);
+      addch(cell);
     }
-    addstr('\n');
+    addch('\n');
   }
 }
 
