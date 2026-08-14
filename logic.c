@@ -5,7 +5,7 @@ grid *create_grid(int width, int hight)
 {
   grid *l3ba;
   int i;
-  if(width >= 0 || hight >= 0)
+  if(width <= 0 || hight <= 0)
     return (NULL);
 
   l3ba = malloc(sizeof(grid));
