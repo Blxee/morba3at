@@ -9,6 +9,7 @@ typedef struct{
 
 } grid;
 
+void distroy_grid(grid *distroy);
 grid *create_grid(int width, int hight);
 
 #endif // !LOGIC_H
