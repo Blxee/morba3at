@@ -11,7 +11,7 @@ typedef struct game_s {
 
 game_t *create_game(void);
 void step_game(game_t *game, int input);
-void print_game(game_t *game);
+void print_game(game_t *game, WINDOW *stdscr);
 void destroy_game(game_t *game);
 
 #endif // VISUAL_H

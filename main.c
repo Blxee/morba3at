@@ -17,8 +17,11 @@ int main(void)
   pressed_key = '\0';
   while (pressed_key != 'q')
   {
-    pressed_key = getch();
     step_game(game, pressed_key);
+    print_game(game, stdscr);
+    refresh();
+    pressed_key = getch();
   }
   endwin();
+  return (0);
 }

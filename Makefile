@@ -6,6 +6,8 @@ INCLUDES = $(wildcard *.h)
 SRC = $(wildcard *.c)
 OBJ = $(SRC:.c=.o)
 
+all: $(NAME)
+
 run: $(NAME)
 	./$(NAME)
 
@@ -14,3 +16,11 @@ $(NAME): $(OBJ)
 
 %.o: %.c $(INCLUDES)
 	$(CC) $(CFLAGS) -c $< -o $@
+
+clean:
+	rm -f $(OBJ)
+
+fclean: clean
+	rm -f $(NAME)
+
+re: fclean all
