@@ -1,4 +1,6 @@
 CC = cc
+CFLAGS = -Wall -Werror -Wextra
+LDFLAGS = -lncurses
 NAME = morba3at
 INCLUDES = $(wildcard *.h)
 SRC = $(wildcard *.c)
@@ -8,7 +10,7 @@ run: $(NAME)
 	./$(NAME)
 
 $(NAME): $(OBJ)
-	$(CC) $^ -o $(NAME)
+	$(CC) $^ $(LDFLAGS) -o $(NAME)
 
 %.o: %.c $(INCLUDES)
-	$(CC) -c $< -o $@
+	$(CC) $(CFLAGS) -c $< -o $@
