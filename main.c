@@ -1,8 +1,23 @@
 #include "logic.h"
 #include "visual.h"
+#include <ncurses.h>
+#include <unistd.h>
 
 int main(void)
 {
-  grid l3ba = create_grid(10, 20);
-  print_grid(l3ba);
+  game_t *game;
+  int pressed_key;
+
+  game = create_game();
+  if (game == NULL)
+    return (1);
+  initscr();
+  raw();
+  noecho();
+  while (pressed_key != 'q')
+  {
+    pressed_key = getch();
+    step_game(game, pressed_key);
+  }
+  endwin();
 }
