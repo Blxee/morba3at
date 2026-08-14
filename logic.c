@@ -12,9 +12,12 @@ grid *create_grid(int width, int hight)
   if(!l3ba)
     return (NULL);
   
-  l3ba->array = malloc(sizeof(l3ba->array));
+  l3ba->array = malloc(sizeof(char) * width * hight);
   if(!l3ba->array)
+  {
+    free(l3ba);
     return (NULL);
+  }
 
   i = 0;
   while(i < width * hight)
