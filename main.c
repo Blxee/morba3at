@@ -14,6 +14,7 @@ int main(void)
   initscr();
   raw();
   noecho();
+  pressed_key = '\0';
   while (pressed_key != 'q')
   {
     pressed_key = getch();
