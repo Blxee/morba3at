@@ -26,7 +26,9 @@ grid *create_grid(int width, int hight)
     i++;
   }
 
-  
+  l3ba->width = width;
+  l3ba->hight = hight;
+
   return (l3ba);
 }
 
