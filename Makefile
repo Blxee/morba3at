@@ -1,10 +1,14 @@
 CC = cc
 NAME = morba3at
-SRC = main.c
+INCLUDES = $(wildcard *.h)
+SRC = $(wildcard *.c)
+OBJ = $(SRC:.c=.o)
 
-run:
-	$(CC) $(SRC) -o $(NAME)
+run: $(NAME)
 	./$(NAME)
 
-# %.o: %.c $(INCLUDES)
-# 	$(CC)
+$(NAME): $(OBJ)
+	$(CC) $^ -o $(NAME)
+
+%.o: %.c $(INCLUDES)
+	$(CC) -c $< -o $@

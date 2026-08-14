@@ -1,6 +1,8 @@
-#include <stdio.h>
+#include "logic.h"
+#include "visual.h"
 
 int main(void)
 {
-  printf("Hello world");
+  grid l3ba = create_grid(10, 20);
+  print_grid(l3ba);
 }
