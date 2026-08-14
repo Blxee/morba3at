@@ -12,7 +12,7 @@ typedef struct{
 grid create_grid(int width, int hight);
 
 #endif // !LOGIC_H
-#define LOGIC_H
+
 
 
 
