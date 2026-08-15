@@ -22,7 +22,7 @@ grid *create_grid(int width, int hight)
   i = 0;
   while(i < width * hight)
   {
-    l3ba->array[i] = '*';
+    l3ba->array[i] = '.';
     i++;
   }
 
